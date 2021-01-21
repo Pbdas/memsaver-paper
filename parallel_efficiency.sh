@@ -9,13 +9,13 @@ die () {
 # run various combinations of datasets, memory limitations,
 # using an increasing number of threads
 
-# BASE=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
-BASE=$(pwd)
-OUTDIR=${BASE}/result
+BASE=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
+# BASE=$(pwd)
+OUTDIR=${BASE}/runs_par
 EPANG=~/mem-epa/bin/epa-ng
 EPANG_SERIAL=~/mem-epa/bin/epa-ng-serial
 T="/usr/bin/time -f '%e' --quiet"
-DATA=~/mem-epa/test/data
+DATA=${BASE}/datasets
 
 
 outfile=${OUTDIR}/parallel.csv
