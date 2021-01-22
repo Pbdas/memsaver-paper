@@ -23,7 +23,7 @@ outfile=${OUTDIR}/parallel.csv
 mkdir -p ${OUTDIR}
 
 # datasets="serratus neotrop pro_ref"
-datasets=(neotrop)
+datasets=(neotrop serratus)
 memsave=(off full maxmem)
 threads=(0 1 4 8 16 32 48)
 
@@ -49,13 +49,13 @@ for rs in {0..4}; do
 	mkdir -p ${cur_dir}
 	cd ${cur_dir}
 
-	common_cmd="--tree ${dat}/tree.newick --msa ${dat}/reference.fasta --model ${dat}/model "
-	common_cmd+="--query ${dat}/query.fasta.gz --redo --verbose"
+	common_cmd="--tree ${dat}/tree.newick --msa ${dat}/reference.fasta.gz --model ${dat}/model "
+	common_cmd+="--query ${dat}/query.fasta.gz --redo --verbose --memsave ${ms}"
 
 	if [ "$ts" == "0" ]; then
 	    eval "${TT} ${EPANG_SERIAL} ${common_cmd}" > /dev/null
 	else
-	    eval "${TT} ${EPANG} ${common_cmd} --memsave ${ms} --threads ${ts}" > /dev/null
+	    eval "${TT} ${EPANG} ${common_cmd} --threads ${ts}" > /dev/null
 	fi
 
 	cd - > /dev/null
