@@ -22,10 +22,10 @@ outfile=${OUTDIR}/parallel.csv
 [[ -f ${outfile} ]] && die "outfile already exists!"
 mkdir -p ${OUTDIR}
 
-# datasets="serratus neotrop pro_ref"
-datasets=(neotrop serratus)
+datasets=(serratus neotrop pro_ref)
+#datasets=(pro_ref)
 memsave=(off full maxmem)
-threads=(0 1 4 8 16 32 48)
+threads=(0 1 2 4 8 16 32 48)
 
 let total=${#datasets[@]}
 let total*=${#memsave[@]}
