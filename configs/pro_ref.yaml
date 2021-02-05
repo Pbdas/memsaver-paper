@@ -5,8 +5,8 @@
 # INPUT DATASET
 ##############################
 # alignment in fasta format and tree in newick format
-dataset_align: %LOCATION%/datasets/pro_ref/pro_ref.fna
-dataset_tree: %LOCATION%/datasets/pro_ref/pro_ref.tre
+dataset_align: %LOCATION%/datasets/pro_ref/reference.fasta
+dataset_tree: %LOCATION%/datasets/pro_ref/tree.newick
 
 # working directory
 #MUST be an absolute path (some software do not accept relative path)

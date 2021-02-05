@@ -5,8 +5,8 @@
 # INPUT DATASET
 ##############################
 # alignment in fasta format and tree in newick format
-dataset_align: %LOCATION%/datasets/serratus/reference/reference.afa
-dataset_tree: %LOCATION%/datasets/serratus/reference/raxml.bestTree
+dataset_align: %LOCATION%/datasets/serratus/reference.fasta
+dataset_tree: %LOCATION%/datasets/serratus/tree.newick
 
 # working directory
 #MUST be an absolute path (some software do not accept relative path)
