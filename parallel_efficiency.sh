@@ -12,11 +12,13 @@ die () {
 BASE=$(cd `dirname "${BASH_SOURCE[0]}"` && pwd)
 # BASE=$(pwd)
 OUTDIR=${BASE}/runs_par
-EPANG=~/mem-epa/bin/epa-ng
-EPANG_SERIAL=~/mem-epa/bin/epa-ng-serial
+EPANG=${BASE}/epa-ng/bin/epa-ng
+EPANG_SERIAL=${BASE}/epa-ng/bin/epa-ng-serial
 T="/usr/bin/time -f '%e' --quiet"
 DATA=${BASE}/datasets
 
+[[ -f ${EPANG} ]] && die "epa-ng executable not there - did you run setup.sh yet?"
+[[ -f ${EPANG_SERIAL} ]] && die "epa-ng-serial executable not there - did you run setup.sh yet?"
 
 outfile=${OUTDIR}/parallel.csv
 [[ -f ${outfile} ]] && die "outfile already exists!"
