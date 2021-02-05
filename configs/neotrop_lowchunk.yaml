@@ -10,7 +10,7 @@ dataset_tree: %LOCATION%/datasets/neotrop/tree.newick
 
 # working directory
 #MUST be an absolute path (some software do not accept relative path)
-workdir: %LOCATION%/memsaver-paper/neotrop_test_lowchunk
+workdir: %LOCATION%/neotrop_test_lowchunk
 
 # states used in analysis, either '0' for nucleotides or '1' for amino acids
 states: 0

@@ -5,12 +5,12 @@
 # INPUT DATASET
 ##############################
 # alignment in fasta format and tree in newick format
-dataset_align: /home/barberpe/mem-epa/test/data/pro_ref/pro_ref.fna
-dataset_tree: /home/barberpe/mem-epa/test/data/pro_ref/pro_ref.tre
+dataset_align: %LOCATION%/datasets/pro_ref/pro_ref.fna
+dataset_tree: %LOCATION%/datasets/pro_ref/pro_ref.tre
 
 # working directory
 #MUST be an absolute path (some software do not accept relative path)
-workdir: /home/barberpe/PEWO/proref_berry
+workdir: %LOCATION%/proref_berry
 
 # states used in analysis, either '0' for nucleotides or '1' for amino acids
 states: 0
@@ -45,7 +45,7 @@ repeats: 5
 query_type: user
 # queries used in resource evaluation, >10000 sequences recommended.
 # MUST be an absolute path (some software do not accept relative path).
-query_user:  /home/barberpe/picrust2_manuscript/data/16S_datasets/blueberry/blueberry_16S_rep_seqs.fna
+query_user:  %LOCATION%/datasets/pro_ref/blueberry_16S_rep_seqs.fna
 
 
 
@@ -100,7 +100,7 @@ config_epang:
   # h3: heuristic equivalent to pplacer defaults, fast
   # h4: no heuristic, very very slow but should produce the best accuracy
   #(Barbera et al, 2019 ; doi: 10.1093/sysbio/syy054)
-  executable: /home/barberpe/mem-epa/bin/epa-ng
+  executable: %LOCATION%/epa-ng/bin/epa-ng
 
   heuristics: [h1]
 
