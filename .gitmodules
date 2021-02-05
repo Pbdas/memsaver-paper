@@ -1,0 +1,6 @@
+[submodule "epa-ng"]
+	path = epa-ng
+	url = https://github.com/Pbdas/epa-ng.git
+[submodule "PEWO"]
+	path = PEWO
+	url = https://github.com/Pbdas/PEWO.git
